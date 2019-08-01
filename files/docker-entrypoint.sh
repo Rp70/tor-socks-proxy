@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 if [ "$STARTUP_DEBUG" = 'yes' ]; then
