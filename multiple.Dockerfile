@@ -12,7 +12,8 @@ RUN set -ex && \
 ADD /files/ /
 
 RUN set -ex && \
-    chmod 0755 /docker-entrypoint.sh
+    chmod 0755 /docker-entrypoint.sh && \
+    ls -lah 
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD ["startup"]
