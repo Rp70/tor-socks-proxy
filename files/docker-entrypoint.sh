@@ -12,4 +12,11 @@ if [ "$CMD" != 'startup' ]; then
 fi
 
 
+TOR_PROCESSES=${TOR_PROCESSES:=10}
+export TOR_PROCESSES
+for i in $(seq 1 $TOR_PROCESSES); do
+    mkdir -p /var/lib/tor/tor$i
+done
+
+
 exec supervisord --nodaemon;
