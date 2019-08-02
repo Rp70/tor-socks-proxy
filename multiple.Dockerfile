@@ -15,5 +15,6 @@ RUN set -ex && \
     chmod 0755 /docker-entrypoint.sh && \
     ls -lah 
 
+HEALTHCHECK NONE
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD ["startup"]
