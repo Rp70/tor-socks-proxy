@@ -1,4 +1,6 @@
-FROM tor-socks-proxy:single
+# This argument BASEIMAGE mainly used to bypass Docker Hub auto build process which doesn't allow to specify a build argument.
+ARG BASEIMAGE=rp70/tor-socks-proxy:single
+FROM $BASEIMAGE
 
 LABEL maintainer="github.com/Rp70"
 LABEL name="tor-socks-proxy:multiple"
